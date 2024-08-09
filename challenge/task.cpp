@@ -5,7 +5,7 @@
 #include <functional>
 #include <random>
 
-// TODO: Implement the execute function
+// TODO: Create a function named 'execute' that executes a given packaged task in a separate thread.
 
 int main()
 {
