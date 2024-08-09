@@ -9,7 +9,6 @@ This program calculates the greatest common divisor of two numbers using the bin
 
 /*
 Define a function 'binary_gcd' that takes two unsigned integers 'numerator' and 'denominator' as arguments.
-The function should return an unsigned integer representing the greatest common divisor of 'numerator' and 'denominator'.
 Arguments:
 - numerator: an unsigned integer
 - denominator: an unsigned integer
@@ -27,6 +26,9 @@ Examples:
 - binary_gcd(0, 0) returns 0
 - binary_gcd(0, 1) returns 1
 - binary_gcd(10, 5) returns 5
+- binary_gcd(10, 0) returns 10
+- binary_gcd(0, 10) returns 10
+- binary_gcd(10, 16) returns 2
 */
 
 unsigned int binary_gcd(unsigned int numerator, unsigned int denominator) {

@@ -13,7 +13,7 @@ This file defines useful inline functions for the project:
 #include <regex>
 #include <vector>
 #include <string>
-#include <stdexcept> 
+#include <stdexcept>
 #include <iostream>
 #include <fstream>
 #include <random>
@@ -24,31 +24,31 @@ This file defines useful inline functions for the project:
 /*
  * Generate an inline function named 'GenerateRandomNumber' that returns a random number in a given range.
  * Arguments:
- * - min: an integer representing the minimum value of the range
- * - max: an integer representing the maximum value of the range
+ * - 'min': an integer representing the minimum value of the range
+ * - 'max': an integer representing the maximum value of the range
  * Returns:
  * - an integer representing a random number in the given range
  * Details:
  * Implement the function using the C++11 random number generation library.
- * 
+ *
  */
 int GenerateRandomNumber(int min, int max)
 {
     // Create a random device
     std::random_device rd;
-    
+
     // Create a random number generator
     std::mt19937 gen(rd());
-    
+
     // Create a uniform distribution of random numbers
     std::uniform_int_distribution<int> dis(min, max);
-    
+
     // Return a random number in the given range
     return dis(gen);
 }
 
 /*
- * 
+ *
  * Generate an inline function named 'GetWelcomeMessage' that returns a random welcome message.
  * Arguments: None
  * Returns: A string representing a welcome message
@@ -62,17 +62,15 @@ std::string GetWelcomeMessage()
     std::vector<std::string> messages = {
         "Hello, World!",
         "Welcome to the program!",
-        "Thanks for using the program!"
-    };
+        "Thanks for using the program!"};
     // Return a random welcome message
     return messages[GenerateRandomNumber(0, messages.size() - 1)];
 }
 
-
 /*
  * Generate a function that validates a phone number using a regular expression pattern.
  * Arguments:
- *  - phoneNumber: a string representing a phone number
+ *  - 'phoneNumbee': a string representing a phone number
  * Returns:
  *  - a boolean value indicating whether the phone number is valid
  * Details:
@@ -90,11 +88,10 @@ inline bool ValidatePhoneNumber(std::string phoneNumber)
 {
     // Create a regular expression to validate a phone number
     std::regex pattern("([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{4})");
-    
+
     // Return the result of the regular expression match
     return std::regex_match(phoneNumber, pattern);
 }
-
 
 /**
  * Generate a function that returns the current date as a string.
@@ -106,13 +103,13 @@ std::string GetCurrentDate()
 {
     // Get the current time
     std::time_t now = std::time(0);
-    
+
     // Convert the current time to a string
     std::string currentDate = std::ctime(&now);
-    
+
     // Remove the newline character from the end of the string
     currentDate.pop_back();
-    
+
     // Return the current date
     return currentDate;
 }
@@ -129,15 +126,15 @@ Example:
 std::string date = "2022-01-01 00:00:00";
 std::time_t result = StringToTime(date);
 */
-std::time_t StringDateToTime(const std::string& date)
+std::time_t StringDateToTime(const std::string &date)
 {
-    // Create a struct to hold the date and time
+    // Create a time struct and initialize it to zero
     std::tm time = {};
 
-    // Create an input string stream from the date string
+    // Create a string stream from the date string
     std::istringstream ss(date);
 
-    // Parse the date string into the time struct using std::get_time
+    // Parse the date string using the time struct
     ss >> std::get_time(&time, "%c");
     if (ss.fail())
     {
@@ -150,7 +147,3 @@ std::time_t StringDateToTime(const std::string& date)
     // Return the time_t object
     return timeObject;
 }
-
-
-
-
