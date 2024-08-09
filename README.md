@@ -8,17 +8,13 @@ GH handle:  andrew-scoppa
 
 ## Materials
 
-[GitHub Copilot Developer](https://github.com/user-attachments/files/15917367/en-v2-github-copilot-developer.pdf)
-
-## Workshop
-
-[Self Paced Exercises for GitHub Copilot](https://github.com/Atmosera-CoPilot-Dev/self-paced)
+[Prompt-Engineering.pdf](https://github.com/user-attachments/files/16561757/Prompt-Engineering.pdf)
 
 ## GitHub Copilot CLI
 
 [Setup GitHub Copilot CLI](https://docs.github.com/en/copilot/github-copilot-in-the-cli/setting-up-github-copilot-in-the-cli)
 
-## OpenAI
+## AI
 
 [Tokenization](https://microsoft.github.io/Workshop-Interact-with-OpenAI-models/tokenization)
 
