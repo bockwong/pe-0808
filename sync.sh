@@ -7,4 +7,5 @@ git stage .
 # Commit changes with a message
 git commit -m "Update"
 
+# Push changes to remote repository on branch main
 git push origin main
