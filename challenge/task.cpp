@@ -5,7 +5,22 @@
 #include <functional>
 #include <random>
 
-// TODO: Create a function named 'execute' that executes a given packaged task in a separate thread. (see line #38)
+/*
+ Create a function named 'execute' that executes a given packaged task in a separate thread.
+Arguments:
+- t: a function that takes an integer as an argument and returns void
+- load: an integer representing the workload. 
+Returns: void
+Details:
+- Create a packaged_task with the given function
+- Get the future from the task
+- Start the task in a separate thread using move semantics
+- Wait for the task to complete
+- Join the worker thread
+- Print "Task completed." after the task is done
+Example:
+execute(job, 10);
+*/
 
 int main()
 {
